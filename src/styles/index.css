@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #112d4e;
+  --secondary-color: #3f72af;
+  --tertiary-color: #dbe2ef;
+  --off-white: #f9f7f7;
+  --off-black: #212529;
+  font-family: "Poppins", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+/* Color for backgrounds and texts */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.text-primary {
+  color: var(--primary-color);
+}
+.hover\:text-primary:hover {
+  color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.hover\:text-secondary:hover {
+  color: var(--secondary-color);
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary-color);
+}
+.text-tertiary {
+  color: var(--tertiary-color);
+}
+.hover\:text-tertiary:hover {
+  color: var(--tertiary-color);
+}
+.active\:text-tertiary:active {
+  color: var(--tertiary-color);
+}
+
+.bg-off-white {
+  background-color: var(--off-white);
+}
+.text-off-white {
+  color: var(--off-white);
+}
+
+.bg-off-black {
+  background-color: var(--off-black);
+}
+.text-off-black {
+  color: var(--off-black);
+}
+
+/* Gradient Background */
+.bg-gradient-custom {
+  background-image: linear-gradient(
+    5deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--tertiary-color),
+    rgba(255, 255, 255, 1)
+  );
+}
+
+/* Flex Positioning (Custom) */
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-start-center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-end-center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Flex Positioning (Custom Small Screen Size) */
+@media (min-width: 640px) {
+  .sm\:flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 640px) {
+  .sm\:flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media (min-width: 640px) {
+  .sm\:flex-end-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.background-container-hero {
+  position: relative;
+  background-image: url("../assets/images/group-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 56%;
+  width: 100%;
+  height: 80vh;
+  z-index: -1;
+}
+.background-container-hero::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .sm\:background-container-hero {
+    position: relative;
+    background-image: url("../assets/images/group-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    width: 100%;
+    z-index: -1;
+  }
+}
+@media (min-width: 768px) {
+  .sm\:background-container-hero::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+  }
+}
+
+.bg-container-promo {
+  background-image: url("../assets/backgrounds/bg-pattern-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Customized Scroll Classes */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-draggable {
+  cursor: grab;
+  user-select: none;
+  cursor: -webkit-grab;
+
+  /* Create a horizontal scrollbar indicator */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.scroll-draggable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-draggable::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.scroll-draggable.dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
