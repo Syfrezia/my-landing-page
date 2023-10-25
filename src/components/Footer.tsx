@@ -89,6 +89,9 @@ const Footer = () => {
           ))}
         </div>
       </div>
+      <div className="w-full mt-6 flex-center-center">
+        <p>Developed by: @syfrezia</p>
+      </div>
     </footer>
   );
 };

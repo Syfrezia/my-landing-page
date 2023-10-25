@@ -104,13 +104,13 @@ export const partnerLinks: PartnerLink[] = [
 
 export const heroTexts = {
   main: "Menuju Perguruan Tinggi Impianmu",
-  desc: "STUDISINI.id siap bantu kamu yang mau sukses masuk ke perguruan tinggi favoritmu. Temukan panduan, latihan, dan bimbingan khusus yang sudah dirancang oleh para tutor terbaik di bidangnya. Ayo mulai perjalanan akademismu sekarang!",
+  desc: "STUDISINI.id siap bantu kamu yang mau sukses masuk ke perguruan tinggi favoritmu. Ayo mulai perjalanan akademismu sekarang!",
 };
 
 export const alumni = {
   name: "William Wijaya",
   desc: "Alumni Bimbingan STUDISINI.id",
-  uni: "Lolos Masuk Institut Teknologi Bersama",
+  uni: "Lolos Institut Teknologi Bandung",
 };
 
 import { femaleModel1, femaleModel2 } from "../assets";
@@ -212,3 +212,53 @@ export const classesLinks: ClassesLink[] = [
     title: "Seleksi Kedinasan",
   },
 ];
+
+import { mentor1, mentor2, mentor3 } from "../assets";
+
+export interface Mentor {
+  name: string;
+  alumni: string;
+  major: string;
+  rating: string;
+  img: string;
+}
+
+export const mentors: Mentor[] = [
+  {
+    name: "Kak Bobby",
+    alumni: "Universitas Indonesia",
+    major: "Bahasa Inggris",
+    rating: "4,8",
+    img: mentor1,
+  },
+  {
+    name: "Kak Dewi",
+    alumni: "Universitas Brawijaya",
+    major: "Matematika",
+    rating: "4,9",
+    img: mentor2,
+  },
+  {
+    name: "Kak Andika",
+    alumni: "Universitas Negeri Semarang",
+    major: "Bahasa Indonesia",
+    rating: "4,8",
+    img: mentor3,
+  },
+];
+
+export interface MentorSection {
+  title: string;
+  desc: string;
+  points: string[];
+}
+
+export const mentorSection: MentorSection = {
+  title: "Belajar bersama Mentor lulusan PTN favorit",
+  desc: "Di STUDISINI.id, kamu akan belajar langsung dari ahlinya dengan metode yang interaktif, suportif dan menyenangkan.",
+  points: [
+    "Lulusan pilihan dari PTN favorit",
+    "Berpengalaman mengajar lebih dari 5 tahun",
+    "Memiliki sertifikasi tingkat nasional hingga internasional",
+  ],
+};

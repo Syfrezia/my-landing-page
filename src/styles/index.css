@@ -21,6 +21,9 @@
 .bg-primary {
   background-color: var(--primary-color);
 }
+.hover\:bg-primary:hover {
+  background-color: var(--primary-color);
+}
 .text-primary {
   color: var(--primary-color);
 }
@@ -172,6 +175,13 @@
 
 .bg-container-promo {
   background-image: url("../assets/backgrounds/bg-pattern-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-container-mentor {
+  background-image: url("../assets/backgrounds/bg-pattern-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

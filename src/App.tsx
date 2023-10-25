@@ -1,6 +1,13 @@
 import "./styles/App.css";
 
-import { Header, Footer, Hero, Program, Promo } from "./components";
+import {
+  Header,
+  Footer,
+  Hero,
+  Program,
+  MentorList,
+  Promo,
+} from "./components";
 
 function App() {
   return (
@@ -8,6 +15,7 @@ function App() {
       <Header />
       <Hero />
       <Program />
+      <MentorList />
       <Promo />
       <Footer />
     </div>

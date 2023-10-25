@@ -55,7 +55,7 @@ const Program = () => {
             <span className="mt-2 lg:mt-0 md:px-4 text-2xl text-primary font-semibold flex-center-center">
               Program Online STUDISINI.id:
             </span>
-            <span className="flex justify-end gap-4">
+            <span className="mt-6 sm:mt-0 flex justify-center sm:justify-end gap-4">
               <button
                 className="text-slate-50 bg-secondary hover:bg-blue-900 text-4xl p-1 rounded-full"
                 onClick={() => scroll("prev")}
