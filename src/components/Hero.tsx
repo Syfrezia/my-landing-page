@@ -1,10 +1,17 @@
 import { maleModel1 } from "../assets";
 import { heroTexts, alumni } from "../constants";
+import { motion } from "framer-motion";
 
 const Hero = () => (
   <section id="hero" className="relative h-[1000px] lg:h-[90vh]">
     <div className="sm:background-container-hero background-container-hero"></div>
-    <div className="absolute top-[5%] xl:top-[10%] flex flex-col lg:flex-row md:items-center w-full px-0 md:px-16 xl:px-32">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="absolute top-[5%] xl:top-[10%] flex flex-col lg:flex-row md:items-center w-full px-0 md:px-16 xl:px-32"
+    >
       <div className="px-6 sm:px-0 sm:ps-0 flex-1">
         <h1 className="font-inter text-center lg:text-start text-5xl text-primary font-bold">
           {heroTexts.main}
@@ -39,7 +46,7 @@ const Hero = () => (
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   </section>
 );
 

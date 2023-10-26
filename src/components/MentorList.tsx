@@ -1,6 +1,7 @@
 import MentorCard from "./MentorCard";
 import { mentors, mentorSection } from "../constants";
 import { BsPatchCheckFill } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const MentorList = () => {
   return (
@@ -8,7 +9,13 @@ const MentorList = () => {
       id="mentor-kami"
       className="w-full h-[100vh] md:h-[80vh] flex flex-col lg:flex-row mt-16 lg:mt-8 lg:px-16 xl:px-32 justify-center lg:items-center"
     >
-      <div className="order-first lg:order-last px-6 lg:flex lg:flex-col lg:justify-center">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="order-first lg:order-last px-6 lg:flex lg:flex-col lg:justify-center"
+      >
         <h2 className="text-primary text-3xl text-center lg:text-start font-bold">
           {mentorSection.title}
         </h2>
@@ -26,15 +33,21 @@ const MentorList = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
 
-      <div className="w-full h-[50%] md:h-[60%] xl:h-[90%] flex-center-center lg:justify-start order-last lg:order-first md:mt-16">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="w-full h-[50%] md:h-[60%] xl:h-[90%] flex-center-center lg:justify-start order-last lg:order-first md:mt-16"
+      >
         <div className="xl:w-[50vw] flex justify-center">
           {mentors.map((mentor, index) => (
             <MentorCard key={index} mentor={mentor} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -3,6 +3,7 @@ import ProgramCard from "./ProgramCard";
 import { programLists } from "../constants";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 const Program = () => {
   const screenLG = useMediaQuery({ minWidth: "1024px" });
@@ -49,7 +50,13 @@ const Program = () => {
       id="program-kami"
       className="w-full h-fit lg:mt-16 mt-6 flex-center-center drop-shadow-lg"
     >
-      <div className="bg-gradient-custom w-full lg:w-[80%] h-fit lg:h-[750px] lg:px-6 py-12 lg:rounded-3xl flex flex-col justify-between">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="bg-gradient-custom w-full lg:w-[80%] h-fit lg:h-[750px] lg:px-6 py-12 lg:rounded-3xl flex flex-col justify-between"
+      >
         <div>
           <div className="flex flex-col md:flex-row justify-between px-6">
             <span className="mt-2 lg:mt-0 md:px-4 text-2xl text-primary font-semibold flex-center-center">
@@ -95,7 +102,7 @@ const Program = () => {
             Coba Kelas Gratis
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
