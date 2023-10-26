@@ -1,7 +1,7 @@
 import { Mentor } from "../constants";
 import { FaStar } from "react-icons/fa";
 
-interface MentorCardProps {
+type MentorCardProps = {
   mentor: Mentor;
 }
 

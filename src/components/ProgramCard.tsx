@@ -1,6 +1,6 @@
 import { ProgramListItem } from "../constants";
 
-interface ProgramCardProps {
+type ProgramCardProps = {
   list: ProgramListItem;
 }
 

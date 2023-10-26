@@ -1,7 +1,7 @@
-export interface NavLink {
+export type NavLink = {
   id: string;
   title: string;
-}
+};
 
 export const navLinks: NavLink[] = [
   {
@@ -25,11 +25,11 @@ export const navLinks: NavLink[] = [
 import { IconType } from "react-icons";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export interface socialLink {
+export type socialLink = {
   id: string;
   icon: IconType;
   link: string;
-}
+};
 
 export const socialMedia: socialLink[] = [
   {
@@ -54,10 +54,10 @@ export const socialMedia: socialLink[] = [
   },
 ];
 
-export interface FooterLink {
+export type FooterLink = {
   id: string;
   title: string;
-}
+};
 
 export const footerLinks: FooterLink[] = [
   {
@@ -86,10 +86,10 @@ export const footerLinks: FooterLink[] = [
   },
 ];
 
-export interface PartnerLink {
+export type PartnerLink = {
   id: string;
   title: string;
-}
+};
 
 export const partnerLinks: PartnerLink[] = [
   {
@@ -115,7 +115,7 @@ export const alumni = {
 
 import { femaleModel1, femaleModel2 } from "../assets";
 
-export interface ProgramListItem {
+export type ProgramListItem = {
   title: string;
   content: string;
   duration: string;
@@ -124,7 +124,7 @@ export interface ProgramListItem {
   priceAfter: string;
   model: string;
   color: string;
-}
+};
 
 export const programLists: ProgramListItem[] = [
   {
@@ -189,10 +189,10 @@ export const programLists: ProgramListItem[] = [
   },
 ];
 
-export interface ClassesLink {
+export type ClassesLink = {
   id: string;
   title: string;
-}
+};
 
 export const classesLinks: ClassesLink[] = [
   {
@@ -215,13 +215,13 @@ export const classesLinks: ClassesLink[] = [
 
 import { mentor1, mentor2, mentor3 } from "../assets";
 
-export interface Mentor {
+export type Mentor = {
   name: string;
   alumni: string;
   major: string;
   rating: string;
   img: string;
-}
+};
 
 export const mentors: Mentor[] = [
   {
@@ -247,11 +247,11 @@ export const mentors: Mentor[] = [
   },
 ];
 
-export interface MentorSection {
+export type MentorSection = {
   title: string;
   desc: string;
   points: string[];
-}
+};
 
 export const mentorSection: MentorSection = {
   title: "Belajar bersama Mentor lulusan PTN favorit",
